@@ -1,0 +1,23 @@
+<div class="row">
+  <h1>Proyectos</h1>
+  <div *ngIf="isAdmin.length >1">  <button id="button-add-about" type="button" class="button-add" routerLink="/newProj"> <img src="assets/add.ico" alt=""
+      *ngIf="isLogged"> </button> </div>
+
+      
+  <div id="proyects" class="carousel slide" data-bs-ride="carousel" *ngFor="let proj of proj">
+    <h2>{{proj.name}} </h2>
+      <div class="card card-body">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <img src={{proj.imgP}} class=" h-20 w-100" alt="...">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <p>{{proj.descP}} </p>
+        </div>
+        <div *ngIf="isAdmin.length > 1">
+          <button id="button-edit" class="button-edit" routerLink="/EProj/{{proj.id}}"><i
+            class="bi bi-pencil-square"></i></button>
+        <button id="button-erase" (click)="delete(proj.id)"><i class="bi bi-trash"></i></button></div>
+        
+
+      </div>
+  

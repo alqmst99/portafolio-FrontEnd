@@ -1,0 +1,27 @@
+<div class="row">
+    <H1>Experiencia Laboral</H1>
+    <div class="col-lg-8"></div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div *ngIf="isAdmin.length >1"> <button id="button-add-about" type="button" class="button-add"
+                routerLink="/newExperience" *ngIf="isLogged"> <i class="bi bi-node-plus-fill"></i></button>
+        </div>
+    </div>
+    <div class="col-lg-1 "></div>
+    <div class="col-lg-10">
+        <div class="experience" *ngFor="let Experience of exp">
+            <div *ngIf="isAdmin.length >1"> <button id="button-edit" class="button-edit "
+                    routerLink="/editExperience/{{Experience.id}}"> <i class="bi bi-pencil-square"></i> </button>
+                <button id="button-erase" (click)="delete(Experience.id)"><i class="bi bi-trash"></i></button>
+            </div>
+            <div>
+                <h2><u>EMPRESA</u> </h2><br>
+                <h2>{{Experience.nameE}}</h2>
+                <h6>Desde: ({{Experience.dateI}})- Hasta: ({{Experience.dateF}}) </h6>
+
+            </div>
+            <h2><u> Ocupación: </u></h2>
+            <h2> {{Experience.descE}}</h2>
+        </div>
+
+    </div>
+</div>

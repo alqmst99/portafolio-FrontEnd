@@ -1,0 +1,35 @@
+<div class="row">
+  <video  id="my-video" class="video W-100" autoplay [muted]="true"  loop>
+    <source src="https://media.istockphoto.com/id/1276753277/es/v%C3%ADdeo/procesamiento-de-datos-y-manchas-brillantes-de-luz-contra-hackers-masculinos-usando-antorcha.mp4?s=mp4-640x640-is&k=20&c=CDzKFscYJNs661kXoDBgJfHbUIo-ZUFRNQqaeBzJ_bM=" type="video/mp4">
+ </video>
+
+  <div class="container py-5 vh-100 ">
+    <div class="d-flex justify-content-center align-items-center ">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 20px; background: transparent; ">
+          <div class="card-body p-5 text-center" style="background: transparent; border-radius: 30px;">
+
+            <h3 class="mb-5">Sign in</h3>
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typeEmailX-2">User</label>
+                <input type="text" id="nameUser" name="nameUser" class="form-control form-control-lg"
+                  [(ngModel)]="nameUser" required />
+                
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Password</label>
+                <input type="password" id="password" name="password" class="form-control form-control-lg"
+                  [(ngModel)]="password" required />
+                
+              </div>
+              <br><button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            </form>
+                  <br><h5><a routerLink="/reg"> Crear Cuenta Usuario</a></h5> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

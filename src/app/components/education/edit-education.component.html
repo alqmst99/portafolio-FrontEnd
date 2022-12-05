@@ -1,0 +1,30 @@
+<div class="row vh-100" >
+  <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;" *ngIf="edu">
+    <form (ngSubmit)="onEdit()" novalidate #f="ngForm">
+      <div class="form-outline ">
+        <label class="form-label" for="nameE">Institución</label>
+        <input type="text" id="nameE" class="form-control" name="nameE" [(ngModel)]="edu.nameE" required />
+
+      </div>
+
+      <div class="form-outline">
+        <label class="form-label" for="dateI">Fecha de ingreso</label>
+        <input type="date" id="dateI" class="form-control" name="dateI" [(ngModel)]="edu.dateI" required />
+
+      </div>
+
+      <div class="form-outline">
+        <label class="form-label" for="dateF">Fecha de egreso</label>
+        <input type="date" id="dateF" class="form-control" name="dateF" [(ngModel)]="edu.dateF" required />
+
+      </div>
+      <div class="form-outline">
+        <label class="form-label" for="descEd">titúlo</label>
+        <input type="text" id="descEd" class="form-control" name="descEd" [(ngModel)]="edu.descEd" required />
+
+      </div>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
+    </form>
+
+  </div>
+</div>

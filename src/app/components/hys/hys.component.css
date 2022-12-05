@@ -1,0 +1,15 @@
+.row{
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(12, 132, 192, 0.9) 0%, rgb(8, 8, 204) 50%, rgba(209, 12, 209, 0.849) 100%);    text-shadow: 5px 8px 10px rgb(0, 0, 0);
+    color: #888888d9;
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+}
+button {
+    background: transparent;
+    border: transparent;
+}
+
+i{
+    font-size: 150%;
+}

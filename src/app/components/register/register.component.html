@@ -1,0 +1,25 @@
+<div class="row vh-100" >
+    <div class="container  " style="border: 5px solid #000000 ; border-radius: 10px;">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="form-outline ">
+                <label class="form-label" for="name">Nombre y apellido</label>
+                <input type="text" id="name" class="form-control" name="name" [(ngModel)]="name" required />
+
+                <div class="form-outline">
+                    <label class="form-label" for="nameUser">Nombre Usuario</label>
+                    <input type="text" id="porcent" class="form-control" name="nameUser" [(ngModel)]="nameUser"
+                        required />
+                </div>
+                <div class="form-outline">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="porcent" class="form-control" name="email" [(ngModel)]="email" required />
+                </div>
+                <div class="form-outline">
+                    <label class="form-label" for="password">Contraseña</label>
+                    <input type="password" id="porcent" class="form-control" name="password" [(ngModel)]="password"
+                        required />
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+            </div>
+        </form>
+    </div>

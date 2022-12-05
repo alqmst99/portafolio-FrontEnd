@@ -1,0 +1,31 @@
+<div class="row">
+
+    <H1>Formación Académica</H1>
+    <div class="col-lg-8"></div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div *ngIf="isAdmin.length >1"> <button id="button-add-about" class="button-add-about"
+                routerLink="/newEducation" *ngIf="isLogged"> <i class="bi bi-node-plus-fill"></i> </button>
+        </div>
+
+    </div>
+    <div class="col-lg-1 "></div>
+    <div class="col-lg-10 ">
+        <div *ngFor="let education of edu">
+            <div class="education fluid">
+                <div *ngIf="isAdmin.length >1"><button id="button-edit" class="button-edit "
+                        routerLink="/editEducation/{{education.id}} "><i class="bi bi-pencil-square"></i></button>
+                    <button id="button-erase-about" (click)="delete(education.id)"><i class="bi bi-trash"
+                            *ngIf="isLogged"></i></button>
+                </div>
+                <div>
+                    <h2><u>INSTITUCIÓN</u> </h2>
+                    <h2>{{education.nameE}}</h2>
+                    <h5>Desde: ({{education.dateI}})-Hasta: ({{education.dateF}})</h5><br>
+                    <h3><u> Titúlo </u></h3>
+                    <h3> {{education.descEd}}</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

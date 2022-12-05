@@ -1,0 +1,31 @@
+<div class="row vh-100"
+  style="background: linear-gradient(90deg, rgba(12, 132, 192, 0.9) 0%, rgb(8, 8, 204) 50%, rgba(209, 12, 209, 0.849) 100%); width: 100%;min-height:720px;">
+  <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-outline ">
+        <label class="form-label" for="nameE">Nombre de la Empresa</label>
+        <input type="text" id="nameE" class="form-control" name="nameE" [(ngModel)]="nameE" required />
+
+      </div>
+
+      <div class="form-outline">
+        <label class="form-label" for="dateI">Fecha de ingreso</label>
+        <input type="date" id="dateI" class="form-control" name="dateI" [(ngModel)]="dateI" required />
+
+      </div>
+
+      <div class="form-outline">
+        <label class="form-label" for="dateF">Fecha de egreso</label>
+        <input type="date" id="dateF" class="form-control" name="dateF" [(ngModel)]="dateF" required />
+
+      </div>
+      <div class="form-outline">
+        <label class="form-label" for="descE">Ocupación</label>
+        <input type="text" id="descE" class="form-control" name="descE" [(ngModel)]="descE" required />
+
+      </div>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Create</button>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.row {
+    background: linear-gradient(90deg, rgba(12, 132, 192, 0.9) 0%, rgb(8, 8, 204) 50%, rgba(209, 12, 209, 0.849) 100%);
+    color: #888888d9;
+    text-align: center;
+    
+    font-family: 'Times New Roman', Times, serif; 
+    text-shadow: 5px 8px 10px #000000;
+}
+
+.experience {
+    width: auto;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+
+
+
+
+button {
+    background: transparent;
+    border: transparent;
+}
+
+
+i{
+    font-size: 150%;
+}

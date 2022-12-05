@@ -1,0 +1,27 @@
+<div class="row vh-100" >
+    <div class="container col-6" style="border: 5px solid #000000 ; border-radius: 10px;">
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  <div class="form-outline ">
+      <label class="form-label" for="nameE">Nombre</label>
+      <input type="text" id="nameE" class="form-control" name="nameE" [(ngModel)]="name" required />
+      
+    </div>
+       
+    <div class="form-outline">
+      <label class="form-label" for="DescP">Descripción</label>
+      <input type="text" id="descP" class="form-control" name="descP" [(ngModel)]="descP" required />
+      
+    </div>
+    <div class="form-outline">
+      <label class="form-label" for="imgP">Imagen Proyecto</label>
+      <input type="file" id="imgP" class="form-control" name="imgP" [(ngModel)]="imgP" required (change)="uploadImg($event)" accept=".jpg, .jpeg, .png" />
+      
+    </div>
+    <div class="image">
+      <img [src]="imageServ.url" style="width: 100px;" alt="">
+    </div>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Create</button>
+</form>
+      
+  </div>
+</div>
